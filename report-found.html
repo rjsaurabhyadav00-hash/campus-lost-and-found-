@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report Found Item</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/found.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        Campus L&F
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="report-lost.html">Lost Items</a></li>
+        <li><a href="report-found.html">Found Items</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contectus.html" class="contact"></a></li>
+
+    </ul>
+
+</nav>
+
+
+<section class="page-title">
+
+    <h1>Report Found Item</h1>
+
+    <p>Fill in the details below to report your Found item.</p>
+
+</section>
+
+
+<!-- Report Form -->
+    <section class="report-form">
+
+        <form id="lostForm">
+
+            <!-- Item Name -->
+            <div class="form-group">
+
+                <label for="itemName">
+                    Item Name
+                </label>
+
+                <input
+                    type="text"
+                    id="itemName"
+                    name="itemName"
+                    placeholder="Enter item name"
+                    minlength="2"
+                    maxlength="50"
+                    required
+                >
+
+                <small class="error-message" id="itemNameError"></small>
+
+            </div>
+
+
+        <div class="form-group">
+
+            <label for="category">Category</label>
+
+            <select id="category" name="category" required>
+
+                <option value="">Select Category</option>
+                <option>Electronic</option>
+                <option>Mobile</option>
+                <option>Wallet</option>
+                <option>Bag</option>
+                <option>ID Card</option>
+                <option>Keys</option>
+                <option>Watch</option>
+                <option>Other</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="location">Found Location</label>
+
+            <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="Enter found location"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="date">Found Date</label>
+
+            <input
+                type="date"
+                id="date"
+                name="date"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="contact">Contact Number</label>
+
+            <div class="phone-input">
+
+                <span class="country-code">+91</span>
+
+                <input
+                    type="tel"
+                    id="contact"
+                    name="contact"
+                    placeholder="Enter 10-digit mobile number"
+                    maxlength="10"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="description">Description</label>
+
+            <textarea
+                id="description"
+                name="description"
+                rows="5"
+                placeholder="Describe your Found item"
+            ></textarea>
+
+        </div>
+
+
+        
+
+
+        <div class="form-group">
+
+            <button type="submit" class="submit-btn">
+                Report Found Item
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+
+            <h2>🎒 Campus L&F</h2>
+
+            <p>
+                Helping students recover lost belongings quickly,
+                securely and easily.
+            </p>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="#">Home</a>
+            <a href="#">Lost Items</a>
+            <a href="#">Found Items</a>
+            <a href="#">Login</a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Contact</h3>
+
+            <p>Email : support@campuslf.com</p>
+
+            <p>Phone : +91 9876543210</p>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+
+        © 2026 Smart Campus Lost & Found Portal |
+        Developed by Saurabh Yadav & Alok Yadav
+
+    </p>
+
+</footer>
+
+
+<script type="module" src="js/found.js"></script>
+
+</body>
+
+</html>

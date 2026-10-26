@@ -1,0 +1,420 @@
+/* ===== GENERAL ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
+}
+
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    background: linear-gradient(90deg, #920f14f2, #363a78b4);
+    color: white;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo i {
+    margin-right: 8px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 10px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd83d;
+}
+
+.nav-links a.active {
+    background: #5b4d00;
+    border-radius: 6px;
+}
+
+.nav-links i {
+    color: #ffd83d;
+    margin-right: 6px;
+}
+
+
+/* ===== PAGE TITLE ===== */
+
+.page-title {
+    text-align: center;
+    padding: 70px 20px 45px;
+}
+
+.page-title h1 {
+    font-size: 60px;
+    color: #1473e6;
+    margin-bottom: 12px;
+}
+
+.page-title p {
+    font-size: 21px;
+    color: #777;
+}
+
+.title-line {
+    width: 350px;
+    height: 1px;
+    background: #ccc;
+    margin: 28px auto 0;
+}
+
+
+/* ===== CONTACT CARDS ===== */
+
+.contact-info {
+    max-width: 1250px;
+    margin: 30px auto 70px;
+    padding: 0 25px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 25px 20px;
+    background: white;
+    border-radius: 8px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.16);
+}
+
+.contact-card .icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.phone-icon {
+    color: #15945c;
+}
+
+.email-icon {
+    color: #e63950;
+}
+
+.location-icon {
+    color: #12bde5;
+}
+
+.contact-card h2 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* ===== FORM SECTION ===== */
+
+.contact-form-section {
+    max-width: 920px;
+    margin: 0 auto 70px;
+    padding: 0 20px;
+}
+
+.contact-form {
+    background: white;
+    padding: 45px 50px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #1473e6;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+
+/* ===== FORM GROUP ===== */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.form-group label i {
+    margin-right: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+
+    border: 1px solid #d5dce5;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1473e6;
+    box-shadow: 0 0 0 3px rgba(20, 115, 230, 0.1);
+}
+
+
+/* ===== BUTTON ===== */
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #1473e6;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #095bb9;
+}
+
+.submit-btn i {
+    margin-right: 7px;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #07132f;
+    color: white;
+    font-size: 14px;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .page-title h1 {
+        font-size: 45px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+    .contact-form h2 {
+        font-size: 26px;
+    }
+
+    .page-title p {
+        font-size: 17px;
+    }
+
+}
+/* ===== FOOTER ===== */
+
+footer {
+    background: #1e293b;
+    color: white;
+    margin-top: 50px;
+    padding: 45px 7% 25px;
+}
+
+
+/* ===== FOOTER CONTAINER ===== */
+
+.footer-container {
+    max-width: 1300px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr;
+    gap: 80px;
+}
+
+
+/* ===== FOOTER BOX ===== */
+
+.footer-box h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.footer-box h3 {
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+
+.footer-box p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #e2e8f0;
+}
+
+
+/* ===== QUICK LINKS ===== */
+
+.footer-box a {
+    display: block;
+
+    color: #e2e8f0;
+    text-decoration: none;
+
+    font-size: 17px;
+
+    margin-bottom: 14px;
+
+    transition: 0.3s;
+}
+
+.footer-box a:hover {
+    color: #60a5fa;
+    padding-left: 5px;
+}
+
+
+/* ===== LINE ===== */
+
+footer hr {
+    max-width: 1300px;
+    margin: 50px auto 25px;
+
+    border: none;
+    border-top: 1px solid #64748b;
+}
+
+
+/* ===== COPYRIGHT ===== */
+
+.copyright {
+    text-align: center;
+
+    font-size: 16px;
+
+    color: #e2e8f0;
+
+    margin: 0;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 800px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    footer {
+        padding: 40px 25px 25px;
+    }
+
+    .footer-box h2 {
+        font-size: 25px;
+    }
+
+    .footer-box h3 {
+        font-size: 21px;
+    }
+
+}

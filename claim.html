@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Claim Requests | Campus L&F</title>
+
+    <link rel="stylesheet" href="css/claim.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="claim-page">
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Campus L&F</span>
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="search.html">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </a>
+
+            <a href="matches.html">
+                <i class="fa-solid fa-link"></i>
+                My Matches
+            </a>
+
+            <a href="claim.html" class="active">
+                <i class="fa-solid fa-hand-paper"></i>
+                Claims
+            </a>
+
+            <a href="about.html">
+                <i class="fa-solid fa-circle-info"></i>
+                About
+            </a>
+
+        </div>
+
+
+        <div class="profile">
+
+            <div class="profile-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <span id="userName">User</span>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <div class="header-content">
+
+            <div class="header-icon">
+                <i class="fa-solid fa-hand-paper"></i>
+            </div>
+
+            <div>
+
+                <span class="small-title">
+                    <i class="fa-solid fa-shield-heart"></i>
+                    Secure Item Recovery
+                </span>
+
+                <h1>Claim Requests</h1>
+
+                <p>
+                    Track and manage your requests for claiming
+                    lost or found belongings.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= STATISTICS ================= -->
+
+    <section class="claim-stats">
+
+        <div class="stat-card">
+
+            <div class="stat-icon pending">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <div>
+
+                <span>Pending</span>
+
+                <h2 id="pendingCount">0</h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon approved">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div>
+
+                <span>Approved</span>
+
+                <h2 id="approvedCount">0</h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon rejected">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+
+            <div>
+
+                <span>Rejected</span>
+
+                <h2 id="rejectedCount">0</h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon total">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+
+            <div>
+
+                <span>Total Requests</span>
+
+                <h2 id="totalClaims">0</h2>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CLAIM REQUESTS ================= -->
+
+    <main class="claims-section">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    YOUR ACTIVITY
+                </span>
+
+                <h2>My Claim Requests</h2>
+
+                <p>
+                    Here you can view the status of all your claim requests.
+                </p>
+
+            </div>
+
+
+            <div class="request-badge">
+
+                <i class="fa-solid fa-file-signature"></i>
+
+                <span id="requestCount">
+                    0 Requests
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= EMPTY STATE ================= -->
+
+        <div class="empty-state" id="emptyState">
+
+            <div class="empty-icon">
+
+                <i class="fa-solid fa-hand-holding-heart"></i>
+
+            </div>
+
+            <h3>No Claim Requests Yet</h3>
+
+            <p>
+                When you claim a matched item, your request
+                will appear here.
+            </p>
+
+            <a href="matches.html" class="browse-btn">
+
+                <i class="fa-solid fa-link"></i>
+
+                View My Matches
+
+            </a>
+
+        </div>
+
+
+
+        <!-- ================= CLAIM CONTAINER ================= -->
+
+        <div class="claims-container" id="claimsContainer">
+
+            <!-- Claim cards will be added here using JavaScript -->
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- ================= INFO BOX ================= -->
+
+    <section class="info-section">
+
+        <div class="info-box">
+
+            <div class="info-icon">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+            </div>
+
+            <div>
+
+                <h3>How Claim Requests Work</h3>
+
+                <p>
+                    Submit a claim for an item that belongs to you.
+                    The report owner can review your request and
+                    approve or reject it.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+     <!-- ===== FOOTER ===== -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <!-- About -->
+        <div class="footer-box">
+
+            <h2>🎒 Campus L&F</h2>
+
+            <p>
+                Helping students recover lost belongings quickly,
+                securely and easily.
+            </p>
+
+        </div>
+
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="report-lost.html">Lost Items</a>
+            <a href="report-found.html">Found Items</a>
+            <a href="login.html">Login</a>
+
+        </div>
+
+
+        <!-- Contact -->
+        <div class="footer-box">
+
+            <h3>Contact</h3>
+
+            <p>Email : support@campuslf.com</p>
+
+            <p>Phone : +91 9876543210</p>
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Smart Campus Lost & Found Portal |
+        Developed by Saurabh Yadav & Alok Yadav
+    </p>
+
+</footer>
+
+</div>
+
+
+<script type="module" src="js/claim.js"></script>
+
+</body>
+
+</html>
+```

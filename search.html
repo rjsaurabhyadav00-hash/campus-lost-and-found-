@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search Items - Campus L&F</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Campus L&F</div>
+
+    <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="report-lost.html">Lost Items</a></li>
+        <li><a href="report-found.html">Found Items</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+
+<!-- PAGE TITLE -->
+<section class="search-header">
+    <h1>Search Items</h1>
+    <p>Find lost and found items reported on campus.</p>
+</section>
+
+
+<!-- SEARCH BOX -->
+<section class="search-section">
+
+    <div class="search-box">
+
+        <div class="search-input-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search item name..."
+            >
+        </div>
+
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Documents">Documents</option>
+            <option value="Bags">Bags</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <select id="typeFilter">
+            <option value="all">All Types</option>
+            <option value="lost">Lost</option>
+            <option value="found">Found</option>
+        </select>
+
+        <button id="searchBtn">
+            <i class="fa-solid fa-search"></i>
+            Search
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- RESULTS -->
+<section class="results-section">
+
+    <div class="results-top">
+        <h2>Available Items</h2>
+        <p class="result-heading"></p>
+    </div>
+
+    <div id="resultsContainer" class="results-container">
+        <!-- Items will appear here -->
+    </div>
+
+    <div id="noResult" class="no-result">
+        <i class="fa-solid fa-box-open"></i>
+        <h3>No items found</h3>
+        <p>Try changing your search or filters.</p>
+    </div>
+
+</section>
+
+
+<!-- DETAILS MODAL -->
+<div id="detailsModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-modal">&times;</span>
+
+        <h2 id="modalTitle">Item Details</h2>
+
+        <div class="modal-details">
+
+            <p>
+                <strong>Category:</strong>
+                <span id="modalCategory"></span>
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                <span id="modalLocation"></span>
+            </p>
+
+            <p>
+                <strong>Date:</strong>
+                <span id="modalDate"></span>
+            </p>
+
+            <p>
+                <strong>Status:</strong>
+                <span id="modalStatus"></span>
+            </p>
+
+            <p>
+                <strong>Description:</strong>
+                <span id="modalDescription"></span>
+            </p>
+
+            <p>
+                <strong>Contact:</strong>
+                <span id="modalContact"></span>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h2>🎒 Campus L&F</h2>
+            <p>
+                Helping students recover lost belongings quickly,
+                securely and easily.
+            </p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="report-lost.html">Lost Items</a>
+            <a href="report-found.html">Found Items</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Login</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contact</h3>
+
+            <p>Email : support@campuslf.com</p>
+            <p>Phone : +91 9876543210</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Smart Campus Lost & Found Portal |
+        Developed by Saurabh Yadav & Alok Yadav
+    </p>
+
+</footer>
+
+
+<script type="module" src="js/search.js"></script>
+
+</body>
+</html>

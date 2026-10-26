@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Campus Lost & Found</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ===== SIDEBAR ===== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Campus L&F</span>
+        </div>
+
+        <div class="menu-title">MAIN MENU</div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="dashboard.html" class="active">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="report-lost.html">
+                    <i class="fas fa-box-open"></i>
+                    <span>Report Lost</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="report-found.html">
+                    <i class="fas fa-gift"></i>
+                    <span>Report Found</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="search.html">
+                    <i class="fas fa-search"></i>
+                    <span>Search Items</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="matches.html">
+                    <i class="fas fa-link"></i>
+                    <span>My Matches</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="claim.html">
+                    <i class="fas fa-hand-paper"></i>
+                    <span>Claim Requests</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    <i class="fas fa-circle-info"></i>
+                    <span>About</span>
+                </a>
+            </li>
+
+        </ul>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="#" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ===== MAIN CONTENT ===== -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Manage your lost and found items easily.</p>
+            </div>
+
+            <div class="user-info">
+
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div>
+                    <small>Welcome back</small>
+                    <span id="userEmail">Loading...</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ===== WELCOME BANNER ===== -->
+
+        <section class="welcome-banner">
+
+            <div class="welcome-text">
+
+                <span class="welcome-tag">
+                    <i class="fa-solid fa-hand-wave"></i>
+                    Welcome to Campus L&F
+                </span>
+
+                <h2>Find What You've Lost.<br>
+                    Help Others Find Theirs.</h2>
+
+                <p>
+                    Report lost items, submit found items and help
+                    reunite belongings with their owners.
+                </p>
+
+                <div class="welcome-buttons">
+
+                    <a href="report-lost.html" class="btn primary-btn">
+                        <i class="fa-solid fa-box-open"></i>
+                        Report Lost Item
+                    </a>
+
+                    <a href="report-found.html" class="btn secondary-btn">
+                        <i class="fa-solid fa-gift"></i>
+                        Report Found Item
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="welcome-icon">
+
+                <i class="fa-solid fa-magnifying-glass-location"></i>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===== STATISTICS ===== -->
+
+        <div class="section-heading">
+
+            <div>
+                <h2>Overview</h2>
+                <p>Current portal statistics</p>
+            </div>
+
+        </div>
+
+
+        <section class="cards">
+
+
+            <!-- LOST -->
+
+            <div class="card lost-card">
+
+                <div class="card-icon">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+
+                <div class="card-content">
+
+                    <span>Total Lost Items</span>
+
+                    <p id="lostCount">0</p>
+
+                    <small>
+                        <i class="fa-solid fa-circle"></i>
+                        Reported items
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOUND -->
+
+            <div class="card found-card">
+
+                <div class="card-icon">
+                    <i class="fa-solid fa-gift"></i>
+                </div>
+
+                <div class="card-content">
+
+                    <span>Total Found Items</span>
+
+                    <p id="foundCount">0</p>
+
+                    <small>
+                        <i class="fa-solid fa-circle"></i>
+                        Found reports
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- MATCHES -->
+
+            <div class="card match-card">
+
+                <div class="card-icon">
+                    <i class="fa-solid fa-link"></i>
+                </div>
+
+                <div class="card-content">
+
+                    <span>My Matches</span>
+
+                    <p id="matchCount">0</p>
+
+                    <small>
+                        <i class="fa-solid fa-circle"></i>
+                        Possible matches
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- CLAIM -->
+
+            <div class="card claim-card">
+
+                <div class="card-icon">
+                    <i class="fa-solid fa-hand-paper"></i>
+                </div>
+
+                <div class="card-content">
+
+                    <span>Claim Requests</span>
+
+                    <p id="claimCount">0</p>
+
+                    <small>
+                        <i class="fa-solid fa-circle"></i>
+                        Your requests
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===== QUICK ACTIONS ===== -->
+
+        <section class="quick-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Quick Actions</h2>
+                    <p>Access important features quickly</p>
+                </div>
+
+            </div>
+
+
+            <div class="quick-actions">
+
+                <a href="search.html" class="action-box">
+
+                    <div class="action-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <div>
+                        <h3>Search Items</h3>
+                        <p>Search for your lost belongings</p>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+
+                </a>
+
+
+                <a href="matches.html" class="action-box">
+
+                    <div class="action-icon">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+
+                    <div>
+                        <h3>My Matches</h3>
+                        <p>Check possible item matches</p>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+
+                </a>
+
+
+                <a href="claim.html" class="action-box">
+
+                    <div class="action-icon">
+                        <i class="fa-solid fa-hand-paper"></i>
+                    </div>
+
+                    <div>
+                        <h3>Claim Requests</h3>
+                        <p>Manage your claim requests</p>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===== HELP BOX ===== -->
+
+        <section class="help-box">
+
+            <div class="help-icon">
+                <i class="fa-solid fa-circle-question"></i>
+            </div>
+
+            <div>
+                <h3>Need Help?</h3>
+                <p>
+                    If you have any questions about the Lost & Found
+                    portal, we're here to help.
+                </p>
+            </div>
+
+            <a href="contectus.html" class="help-btn">
+                Contact Us
+            </a>
+
+        </section>
+    
+
+    </main>
+
+</div>
+
+
+<script type="module" src="js/dashboard.js"></script>
+
+</body>
+
+</html>

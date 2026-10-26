@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Matches | Lost & Found Portal</title>
+
+    <link rel="stylesheet" href="css/matches.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Campus L&F
+        </div>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="index.html">Home</a>
+            <a href="report-lost.html">Lost Items</a>
+            <a href="report-found.html">Found Items</a>
+            <a href="my-matches.html" class="active">My Matches</a>
+            <a href="about.html">About</a>
+        </div>
+
+        <div class="profile">
+            <i class="fa-solid fa-user"></i>
+            <span id="userName">User</span>
+        </div>
+
+    </nav>
+
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>My Matches</h1>
+
+        <p>
+            View items that may match your lost or found item.
+        </p>
+    </section>
+
+
+    <!-- Matches Section -->
+    <section class="matches-section">
+
+        <div class="section-title">
+            <h2>Possible Matches</h2>
+
+            <span id="matchCount">
+                0 Matches
+            </span>
+        </div>
+
+
+        <!-- Matches will be loaded here -->
+        <div class="matches-container" id="matchesContainer">
+
+            <!-- Demo Match Card -->
+
+            <div class="match-card">
+
+                <div class="match-image">
+                    <img src="images/placeholder.jpg" alt="Matched Item">
+                </div>
+
+                <div class="match-content">
+
+                    <div class="match-top">
+                        <h3>Black Wallet</h3>
+
+                        <span class="status found">
+                            Found
+                        </span>
+                    </div>
+
+                    <p class="description">
+                        Black wallet found near the college library.
+                    </p>
+
+                    <div class="item-info">
+
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            College Library
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-calendar"></i>
+                            15 September 2026
+                        </p>
+
+                    </div>
+
+                    <div class="match-details">
+
+                        <span>
+                            <i class="fa-solid fa-percent"></i>
+                            Possible Match
+                        </span>
+
+                        <button class="view-btn">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- No Matches -->
+        <div class="no-matches" id="noMatches">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h3>No Matches Found</h3>
+
+            <p>
+                We haven't found any possible matches for your items yet.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== FOOTER ===== -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <!-- About -->
+        <div class="footer-box">
+
+            <h2>🎒 Campus L&F</h2>
+
+            <p>
+                Helping students recover lost belongings quickly,
+                securely and easily.
+            </p>
+
+        </div>
+
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="report-lost.html">Lost Items</a>
+            <a href="report-found.html">Found Items</a>
+            <a href="login.html">Login</a>
+
+        </div>
+
+
+        <!-- Contact -->
+        <div class="footer-box">
+
+            <h3>Contact</h3>
+
+            <p>Email : support@campuslf.com</p>
+
+            <p>Phone : +91 9876543210</p>
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Smart Campus Lost & Found Portal |
+        Developed by Saurabh Yadav & Alok Yadav
+    </p>
+
+</footer>
+
+
+    <!-- JavaScript -->
+    <script type="module" src="js/matches.js"></script>
+
+</body>
+
+</html>
+```
